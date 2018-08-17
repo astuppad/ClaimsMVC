@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SampleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Claim_CLM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Insurer" Type="nvarchar" MaxLength="256" />
+          <Property Name="PolicyType" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="PolicyNumber" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="BusinessName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="BusinessContactName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="AddressSearch" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="PostCode" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="MobileNumber" Type="nvarchar" MaxLength="256" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="PolicyStartDate" Type="date" />
+          <Property Name="PolicyEndDate" Type="date" />
+          <Property Name="PolicyStatus" Type="nvarchar" MaxLength="250" />
+          <Property Name="OutstandingPremium" Type="money" />
+          <Property Name="OutstandingAmount" Type="money" />
+          <Property Name="PolicyExcess" Type="money" />
+          <Property Name="BrokerName" Type="nvarchar" MaxLength="256" />
+          <Property Name="BrokerContact" Type="nvarchar" MaxLength="256" />
+          <Property Name="Was the loss reported to the police?" Type="nvarchar" MaxLength="250" />
+          <Property Name="Police Reference Number" Type="int" />
+          <Property Name="Details" Type="nvarchar" MaxLength="250" />
+          <Property Name="Same as Risk Address" Type="bit" />
+          <Property Name="Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="Address 1" Type="nvarchar" MaxLength="250" />
+          <Property Name="Address 2" Type="nvarchar" MaxLength="250" />
+          <Property Name="Suburb" Type="nvarchar" MaxLength="250" />
+          <Property Name="INFPostcode" Type="nvarchar" MaxLength="250" />
+          <Property Name="INFState" Type="nvarchar" MaxLength="250" />
+          <Property Name="Reported by" Type="nvarchar" MaxLength="250" />
+          <Property Name="First Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Last Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Contact Number" Type="nvarchar" MaxLength="250" />
+          <Property Name="INFEmail" Type="nvarchar" MaxLength="250" />
+          <Property Name="Date of Loss" Type="date" Nullable="false" />
+          <Property Name="Time of Loss" Type="time" Precision="7" />
+          <Property Name="Loss Cause" Type="nvarchar" MaxLength="250" />
+          <Property Name="Secondary Loss Casue" Type="nvarchar" MaxLength="250" />
+          <Property Name="Claim No." Type="int" />
+          <Property Name="External Reference Number" Type="nvarchar" MaxLength="250" />
+          <Property Name="Reported Date" Type="date" />
+          <Property Name="Loss Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="Severity" Type="nvarchar" MaxLength="250" />
+          <Property Name="Claim Decision" Type="nvarchar" MaxLength="250" />
+          <Property Name="Contact Type" Type="nvarchar" MaxLength="250" />
+          <Property Name="CCFirst Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="CCLast Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="CCPhone Number" Type="nvarchar" MaxLength="250" />
+          <Property Name="CCMobile Phone" Type="nvarchar" MaxLength="250" />
+          <Property Name="CCEmail" Type="nvarchar" MaxLength="250" />
+          <Property Name="Preferred Contact" Type="nvarchar" MaxLength="250" />
+          <Property Name="Catastrophe Event" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="Start Date" Type="date" />
+          <Property Name="End Date" Type="date" />
+          <Property Name="Claim Owner" Type="nvarchar" MaxLength="250" />
+          <Property Name="Assessment" Type="nvarchar" MaxLength="250" />
+          <Property Name="Assessor" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityContainer Name="SampleModelStoreContainer">
+          <EntitySet Name="Claim_CLM" EntityType="Self.Claim_CLM" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SampleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ClaimsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Claim_CLM" EntityType="SampleModel.Claim_CLM" />
+        </EntityContainer>
+        <EntityType Name="Claim_CLM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Insurer" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyType" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyNumber" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="BusinessName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="BusinessContactName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="AddressSearch" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PostCode" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNumber" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyStartDate" Type="DateTime" Precision="0" />
+          <Property Name="PolicyEndDate" Type="DateTime" Precision="0" />
+          <Property Name="PolicyStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OutstandingPremium" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OutstandingAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PolicyExcess" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BrokerName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="BrokerContact" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Was_the_loss_reported_to_the_police_" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Police_Reference_Number" Type="Int32" />
+          <Property Name="Details" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Same_as_Risk_Address" Type="Boolean" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Address_1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Address_2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Suburb" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="INFPostcode" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="INFState" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Reported_by" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="First_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Last_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Contact_Number" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="INFEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Date_of_Loss" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Time_of_Loss" Type="Time" Precision="7" />
+          <Property Name="Loss_Cause" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Secondary_Loss_Casue" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Claim_No_" Type="Int32" />
+          <Property Name="External_Reference_Number" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Reported_Date" Type="DateTime" Precision="0" />
+          <Property Name="Loss_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Severity" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Claim_Decision" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Contact_Type" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CCFirst_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CCLast_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CCPhone_Number" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CCMobile_Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CCEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Preferred_Contact" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Catastrophe_Event" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Start_Date" Type="DateTime" Precision="0" />
+          <Property Name="End_Date" Type="DateTime" Precision="0" />
+          <Property Name="Claim_Owner" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Assessment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Assessor" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SampleModelStoreContainer" CdmEntityContainer="ClaimsEntities">
+          <EntitySetMapping Name="Claim_CLM">
+            <EntityTypeMapping TypeName="SampleModel.Claim_CLM">
+              <MappingFragment StoreEntitySet="Claim_CLM">
+                <ScalarProperty Name="Assessor" ColumnName="Assessor" />
+                <ScalarProperty Name="Assessment" ColumnName="Assessment" />
+                <ScalarProperty Name="Claim_Owner" ColumnName="Claim Owner" />
+                <ScalarProperty Name="End_Date" ColumnName="End Date" />
+                <ScalarProperty Name="Start_Date" ColumnName="Start Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Catastrophe_Event" ColumnName="Catastrophe Event" />
+                <ScalarProperty Name="Preferred_Contact" ColumnName="Preferred Contact" />
+                <ScalarProperty Name="CCEmail" ColumnName="CCEmail" />
+                <ScalarProperty Name="CCMobile_Phone" ColumnName="CCMobile Phone" />
+                <ScalarProperty Name="CCPhone_Number" ColumnName="CCPhone Number" />
+                <ScalarProperty Name="CCLast_Name" ColumnName="CCLast Name" />
+                <ScalarProperty Name="CCFirst_Name" ColumnName="CCFirst Name" />
+                <ScalarProperty Name="Contact_Type" ColumnName="Contact Type" />
+                <ScalarProperty Name="Claim_Decision" ColumnName="Claim Decision" />
+                <ScalarProperty Name="Severity" ColumnName="Severity" />
+                <ScalarProperty Name="Loss_Description" ColumnName="Loss Description" />
+                <ScalarProperty Name="Reported_Date" ColumnName="Reported Date" />
+                <ScalarProperty Name="External_Reference_Number" ColumnName="External Reference Number" />
+                <ScalarProperty Name="Claim_No_" ColumnName="Claim No." />
+                <ScalarProperty Name="Secondary_Loss_Casue" ColumnName="Secondary Loss Casue" />
+                <ScalarProperty Name="Loss_Cause" ColumnName="Loss Cause" />
+                <ScalarProperty Name="Time_of_Loss" ColumnName="Time of Loss" />
+                <ScalarProperty Name="Date_of_Loss" ColumnName="Date of Loss" />
+                <ScalarProperty Name="INFEmail" ColumnName="INFEmail" />
+                <ScalarProperty Name="Contact_Number" ColumnName="Contact Number" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+                <ScalarProperty Name="First_Name" ColumnName="First Name" />
+                <ScalarProperty Name="Reported_by" ColumnName="Reported by" />
+                <ScalarProperty Name="INFState" ColumnName="INFState" />
+                <ScalarProperty Name="INFPostcode" ColumnName="INFPostcode" />
+                <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+                <ScalarProperty Name="Address_2" ColumnName="Address 2" />
+                <ScalarProperty Name="Address_1" ColumnName="Address 1" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Same_as_Risk_Address" ColumnName="Same as Risk Address" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Police_Reference_Number" ColumnName="Police Reference Number" />
+                <ScalarProperty Name="Was_the_loss_reported_to_the_police_" ColumnName="Was the loss reported to the police?" />
+                <ScalarProperty Name="BrokerContact" ColumnName="BrokerContact" />
+                <ScalarProperty Name="BrokerName" ColumnName="BrokerName" />
+                <ScalarProperty Name="PolicyExcess" ColumnName="PolicyExcess" />
+                <ScalarProperty Name="OutstandingAmount" ColumnName="OutstandingAmount" />
+                <ScalarProperty Name="OutstandingPremium" ColumnName="OutstandingPremium" />
+                <ScalarProperty Name="PolicyStatus" ColumnName="PolicyStatus" />
+                <ScalarProperty Name="PolicyEndDate" ColumnName="PolicyEndDate" />
+                <ScalarProperty Name="PolicyStartDate" ColumnName="PolicyStartDate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="AddressSearch" ColumnName="AddressSearch" />
+                <ScalarProperty Name="BusinessContactName" ColumnName="BusinessContactName" />
+                <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+                <ScalarProperty Name="PolicyType" ColumnName="PolicyType" />
+                <ScalarProperty Name="Insurer" ColumnName="Insurer" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

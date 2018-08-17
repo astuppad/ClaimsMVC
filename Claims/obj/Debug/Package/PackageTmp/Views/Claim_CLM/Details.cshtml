@@ -1,0 +1,523 @@
+﻿@model Claims.Claim_CLM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Claim_CLM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Insurer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Insurer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolicyType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolicyNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessContactName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessContactName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressSearch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressSearch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolicyStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyEndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolicyEndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolicyStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutstandingPremium)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutstandingPremium)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutstandingAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutstandingAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyExcess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolicyExcess)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrokerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrokerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrokerContact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrokerContact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Was_the_loss_reported_to_the_police_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Was_the_loss_reported_to_the_police_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Police_Reference_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Police_Reference_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Same_as_Risk_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Same_as_Risk_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address_1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address_2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Suburb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Suburb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INFPostcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INFPostcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INFState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INFState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reported_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reported_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.First_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Last_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Last_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INFEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INFEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_of_Loss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_of_Loss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time_of_Loss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time_of_Loss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Loss_Cause)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loss_Cause)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Secondary_Loss_Casue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Secondary_Loss_Casue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Claim_No_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Claim_No_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.External_Reference_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.External_Reference_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reported_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reported_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Loss_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loss_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Severity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Severity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Claim_Decision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Claim_Decision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CCFirst_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CCFirst_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CCLast_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CCLast_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CCPhone_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CCPhone_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CCMobile_Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CCMobile_Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CCEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CCEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preferred_Contact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preferred_Contact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Catastrophe_Event)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Catastrophe_Event)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Start_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Start_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Claim_Owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Claim_Owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assessment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assessment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assessor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assessor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

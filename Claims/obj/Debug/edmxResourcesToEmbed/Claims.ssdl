@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SampleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Claim_CLM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Insurer" Type="nvarchar" MaxLength="256" />
+    <Property Name="PolicyType" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="PolicyNumber" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="BusinessName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="BusinessContactName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="AddressSearch" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="PostCode" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="State" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="256" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="PolicyStartDate" Type="date" />
+    <Property Name="PolicyEndDate" Type="date" />
+    <Property Name="PolicyStatus" Type="nvarchar" MaxLength="250" />
+    <Property Name="OutstandingPremium" Type="money" />
+    <Property Name="OutstandingAmount" Type="money" />
+    <Property Name="PolicyExcess" Type="money" />
+    <Property Name="BrokerName" Type="nvarchar" MaxLength="256" />
+    <Property Name="BrokerContact" Type="nvarchar" MaxLength="256" />
+    <Property Name="Was the loss reported to the police?" Type="nvarchar" MaxLength="250" />
+    <Property Name="Police Reference Number" Type="int" />
+    <Property Name="Details" Type="nvarchar" MaxLength="250" />
+    <Property Name="Same as Risk Address" Type="bit" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Address 1" Type="nvarchar" MaxLength="250" />
+    <Property Name="Address 2" Type="nvarchar" MaxLength="250" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="250" />
+    <Property Name="INFPostcode" Type="nvarchar" MaxLength="250" />
+    <Property Name="INFState" Type="nvarchar" MaxLength="250" />
+    <Property Name="Reported by" Type="nvarchar" MaxLength="250" />
+    <Property Name="First Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Last Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Contact Number" Type="nvarchar" MaxLength="250" />
+    <Property Name="INFEmail" Type="nvarchar" MaxLength="250" />
+    <Property Name="Date of Loss" Type="date" Nullable="false" />
+    <Property Name="Time of Loss" Type="time" Precision="7" />
+    <Property Name="Loss Cause" Type="nvarchar" MaxLength="250" />
+    <Property Name="Secondary Loss Casue" Type="nvarchar" MaxLength="250" />
+    <Property Name="Claim No." Type="int" />
+    <Property Name="External Reference Number" Type="nvarchar" MaxLength="250" />
+    <Property Name="Reported Date" Type="date" />
+    <Property Name="Loss Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Severity" Type="nvarchar" MaxLength="250" />
+    <Property Name="Claim Decision" Type="nvarchar" MaxLength="250" />
+    <Property Name="Contact Type" Type="nvarchar" MaxLength="250" />
+    <Property Name="CCFirst Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="CCLast Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="CCPhone Number" Type="nvarchar" MaxLength="250" />
+    <Property Name="CCMobile Phone" Type="nvarchar" MaxLength="250" />
+    <Property Name="CCEmail" Type="nvarchar" MaxLength="250" />
+    <Property Name="Preferred Contact" Type="nvarchar" MaxLength="250" />
+    <Property Name="Catastrophe Event" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Start Date" Type="date" />
+    <Property Name="End Date" Type="date" />
+    <Property Name="Claim Owner" Type="nvarchar" MaxLength="250" />
+    <Property Name="Assessment" Type="nvarchar" MaxLength="250" />
+    <Property Name="Assessor" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityContainer Name="SampleModelStoreContainer">
+    <EntitySet Name="Claim_CLM" EntityType="Self.Claim_CLM" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

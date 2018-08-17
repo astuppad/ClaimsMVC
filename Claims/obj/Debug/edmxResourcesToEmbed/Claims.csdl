@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SampleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ClaimsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Claim_CLM" EntityType="SampleModel.Claim_CLM" />
+  </EntityContainer>
+  <EntityType Name="Claim_CLM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Insurer" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyType" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyNumber" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="BusinessName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="BusinessContactName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="AddressSearch" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyStartDate" Type="DateTime" Precision="0" />
+    <Property Name="PolicyEndDate" Type="DateTime" Precision="0" />
+    <Property Name="PolicyStatus" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="OutstandingPremium" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OutstandingAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PolicyExcess" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BrokerName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="BrokerContact" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Was_the_loss_reported_to_the_police_" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Police_Reference_Number" Type="Int32" />
+    <Property Name="Details" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Same_as_Risk_Address" Type="Boolean" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Address_1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Address_2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Suburb" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="INFPostcode" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="INFState" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Reported_by" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="First_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Last_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Contact_Number" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="INFEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Date_of_Loss" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Time_of_Loss" Type="Time" Precision="7" />
+    <Property Name="Loss_Cause" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Secondary_Loss_Casue" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Claim_No_" Type="Int32" />
+    <Property Name="External_Reference_Number" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Reported_Date" Type="DateTime" Precision="0" />
+    <Property Name="Loss_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Severity" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Claim_Decision" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Contact_Type" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CCFirst_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CCLast_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CCPhone_Number" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CCMobile_Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CCEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Preferred_Contact" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Catastrophe_Event" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Start_Date" Type="DateTime" Precision="0" />
+    <Property Name="End_Date" Type="DateTime" Precision="0" />
+    <Property Name="Claim_Owner" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Assessment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Assessor" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

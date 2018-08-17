@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SampleModelStoreContainer" CdmEntityContainer="ClaimsEntities">
+    <EntitySetMapping Name="Claim_CLM">
+      <EntityTypeMapping TypeName="SampleModel.Claim_CLM">
+        <MappingFragment StoreEntitySet="Claim_CLM">
+          <ScalarProperty Name="Assessor" ColumnName="Assessor" />
+          <ScalarProperty Name="Assessment" ColumnName="Assessment" />
+          <ScalarProperty Name="Claim_Owner" ColumnName="Claim Owner" />
+          <ScalarProperty Name="End_Date" ColumnName="End Date" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Catastrophe_Event" ColumnName="Catastrophe Event" />
+          <ScalarProperty Name="Preferred_Contact" ColumnName="Preferred Contact" />
+          <ScalarProperty Name="CCEmail" ColumnName="CCEmail" />
+          <ScalarProperty Name="CCMobile_Phone" ColumnName="CCMobile Phone" />
+          <ScalarProperty Name="CCPhone_Number" ColumnName="CCPhone Number" />
+          <ScalarProperty Name="CCLast_Name" ColumnName="CCLast Name" />
+          <ScalarProperty Name="CCFirst_Name" ColumnName="CCFirst Name" />
+          <ScalarProperty Name="Contact_Type" ColumnName="Contact Type" />
+          <ScalarProperty Name="Claim_Decision" ColumnName="Claim Decision" />
+          <ScalarProperty Name="Severity" ColumnName="Severity" />
+          <ScalarProperty Name="Loss_Description" ColumnName="Loss Description" />
+          <ScalarProperty Name="Reported_Date" ColumnName="Reported Date" />
+          <ScalarProperty Name="External_Reference_Number" ColumnName="External Reference Number" />
+          <ScalarProperty Name="Claim_No_" ColumnName="Claim No." />
+          <ScalarProperty Name="Secondary_Loss_Casue" ColumnName="Secondary Loss Casue" />
+          <ScalarProperty Name="Loss_Cause" ColumnName="Loss Cause" />
+          <ScalarProperty Name="Time_of_Loss" ColumnName="Time of Loss" />
+          <ScalarProperty Name="Date_of_Loss" ColumnName="Date of Loss" />
+          <ScalarProperty Name="INFEmail" ColumnName="INFEmail" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact Number" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First Name" />
+          <ScalarProperty Name="Reported_by" ColumnName="Reported by" />
+          <ScalarProperty Name="INFState" ColumnName="INFState" />
+          <ScalarProperty Name="INFPostcode" ColumnName="INFPostcode" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Address_2" ColumnName="Address 2" />
+          <ScalarProperty Name="Address_1" ColumnName="Address 1" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Same_as_Risk_Address" ColumnName="Same as Risk Address" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Police_Reference_Number" ColumnName="Police Reference Number" />
+          <ScalarProperty Name="Was_the_loss_reported_to_the_police_" ColumnName="Was the loss reported to the police?" />
+          <ScalarProperty Name="BrokerContact" ColumnName="BrokerContact" />
+          <ScalarProperty Name="BrokerName" ColumnName="BrokerName" />
+          <ScalarProperty Name="PolicyExcess" ColumnName="PolicyExcess" />
+          <ScalarProperty Name="OutstandingAmount" ColumnName="OutstandingAmount" />
+          <ScalarProperty Name="OutstandingPremium" ColumnName="OutstandingPremium" />
+          <ScalarProperty Name="PolicyStatus" ColumnName="PolicyStatus" />
+          <ScalarProperty Name="PolicyEndDate" ColumnName="PolicyEndDate" />
+          <ScalarProperty Name="PolicyStartDate" ColumnName="PolicyStartDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="AddressSearch" ColumnName="AddressSearch" />
+          <ScalarProperty Name="BusinessContactName" ColumnName="BusinessContactName" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+          <ScalarProperty Name="PolicyType" ColumnName="PolicyType" />
+          <ScalarProperty Name="Insurer" ColumnName="Insurer" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

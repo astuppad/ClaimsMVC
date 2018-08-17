@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Claims.Claim_CLM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.Insurer)
+        </td>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.PolicyType)
+        </td>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.PolicyNumber)
+        </td>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.FirstName)
+        </td>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.LastName)
+        </td>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.BusinessName)
+        </td>
+        <td>
+            @Html.DisplayNameFor(m => m.PolicyStartDate)
+        </td>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.PolicyEndDate)
+        </td>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.PolicyStatus)
+        </td>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.Date_of_Loss)
+        </td>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.Catastrophe_Event)
+        </td>
+
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.Assessor)
+        </td>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Insurer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyStartDate, "{0:dd/MM/yyyy}")
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyStatus)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_of_Loss)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Catastrophe_Event)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.Assessor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

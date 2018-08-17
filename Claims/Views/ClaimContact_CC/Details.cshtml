@@ -1,0 +1,82 @@
+﻿@model Claims.ClaimContact_CC
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>ClaimContact_CC</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Contact_Type)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Contact_Type)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.First_Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.First_Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Last_Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Last_Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone_Number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Phone_Number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Mobile_Phone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Mobile_Phone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Preferred_Contact)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Preferred_Contact)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

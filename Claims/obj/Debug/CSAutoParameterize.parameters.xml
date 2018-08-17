@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Claims-20180801025854.mdf;Initial Catalog=aspnet-Claims-20180801025854;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Niket\\documents\\visual\ studio\ 2015\\Projects\\Claims\\Claims\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="ClaimsEntities-Web.config Connection String" description="ClaimsEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Claims.csdl|res://*/Claims.ssdl|res://*/Claims.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=LAPTOP-S4B8HFC7\SQLEXPRESS;initial catalog=Sample;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Niket\\documents\\visual\ studio\ 2015\\Projects\\Claims\\Claims\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ClaimsEntities']/@connectionString" />
+  </parameter>
+</parameters>
